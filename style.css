@@ -208,8 +208,8 @@ input, select, textarea { font-family: inherit; }
   flex-shrink: 0;
 }
 .nav-logo img {
-  width: 86px;
-  height: 56px;
+  width: 46px;
+  height: 46px;
   border-radius: 8px;
   object-fit: cover;
 }
@@ -1260,8 +1260,8 @@ input, select, textarea { font-family: inherit; }
   gap: 10px;
 }
 .footer-logo img {
-  width: 86px;
-  height: 56px;
+  width: 46px;
+  height: 46px;
   border-radius: 8px;
   object-fit: cover;
 }

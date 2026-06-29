@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 – Page Not Found | Stackly Zero Waste</title>
+  <meta name="description" content="The page you're looking for doesn't exist. Return to Stackly Zero Waste." />
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="404.css" />
+</head>
+<body class="page-404">
+
+  <!-- Animated background -->
+  <div class="bg-404" aria-hidden="true">
+    <div class="bg-blob b1"></div>
+    <div class="bg-blob b2"></div>
+    <div class="bg-blob b3"></div>
+    <div class="bg-grid"></div>
+  </div>
+
+  <!-- Floating leaves (decorative) -->
+  <div class="leaves" aria-hidden="true">
+    <span class="leaf l1">🍃</span>
+    <span class="leaf l2">🌿</span>
+    <span class="leaf l3">🍂</span>
+    <span class="leaf l4">🌱</span>
+    <span class="leaf l5">🍃</span>
+    <span class="leaf l6">♻️</span>
+  </div>
+
+  <!-- Navbar strip -->
+  <header class="err-nav">
+    <a href="index.html" class="err-logo" id="err-logo">
+      <img src="images/stackly_logo.webp" alt="Stackly Zero Waste" width="36" height="36" />
+      <span>Stackly<em>ZeroWaste</em></span>
+    </a>
+    <a href="index.html" class="err-home-link" id="err-home-nav">← Back to Home</a>
+  </header>
+
+  <!-- Main 404 content -->
+  <main class="err-main" id="err-main">
+
+    <div class="err-card">
+
+      <!-- Animated 404 number -->
+      <div class="err-number" aria-hidden="true">
+        <span class="n4 n4-left">4</span>
+        <div class="err-globe">
+          <div class="globe-inner">🗑️</div>
+          <div class="globe-ring"></div>
+          <div class="globe-ring ring-2"></div>
+        </div>
+        <span class="n4 n4-right">4</span>
+      </div>
+
+      <div class="err-content">
+        <span class="err-badge">404 Error</span>
+        <h1 class="err-title">Oops! This page<br />went to the compost</h1>
+        <p class="err-desc">The page you're looking for has been recycled, composted, or never existed. But don't worry — let's get you back on track!</p>
+
+        <!-- Quick nav links -->
+       <div class="err-links">
+    <a href="index.html" class="err-btn primary" id="err-go-home">
+        🏠 Go to Homepage
+    </a>
+
+    <a href="#" class="err-btn secondary" id="err-go-back" onclick="goBack(event)">
+        ⬅️ Go Back
+    </a>
+</div>
+
+<script>
+function goBack(event) {
+    event.preventDefault();
+
+    if (window.history.length > 1) {
+        window.history.back();
+    } else {
+        window.location.href = "index.html"; // Fallback if no previous page
+    }
+}
+</script>
+
+        <!-- Suggested pages -->
+        <div class="err-suggestions">
+          <p class="suggestions-label">Or visit one of these pages:</p>
+          <div class="suggestions-grid">
+            <a href="index.html#solutions" class="suggestion-link" id="err-solutions">
+              <span>♻️</span> Solutions
+            </a>
+            <a href="index.html#faq" class="suggestion-link" id="err-faq">
+              <span>❓</span> FAQ
+            </a>
+            <a href="login.html" class="suggestion-link" id="err-login">
+              <span>🔑</span> Login
+            </a>
+            <a href="signup.html" class="suggestion-link" id="err-signup">
+              <span>✨</span> Sign Up
+            </a>
+            <a href="index.html#contact" class="suggestion-link" id="err-contact">
+              <span>📞</span> Contact
+            </a>
+            <a href="index.html#importance" class="suggestion-link" id="err-about">
+              <span>🌿</span> About
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Search box -->
+      <div class="err-search-wrap">
+        <label for="err-search" class="err-search-label">Search our site instead:</label>
+        <form class="err-search-form" id="err-search-form" onsubmit="return false;">
+          <input type="search" id="err-search" placeholder="e.g. composting, food waste..." aria-label="Search the site" />
+          <button type="submit" id="err-search-btn">Search</button>
+        </form>
+        <p class="err-search-note" id="err-search-note" hidden>Search results will appear here. <em>(Demo — connects to site search)</em></p>
+      </div>
+    </div>
+
+    <!-- Fun fact ticker -->
+    <div class="err-fact-ticker">
+      <span class="fact-label">🌍 Did you know?</span>
+      <span class="fact-text" id="fact-text">Loading fact...</span>
+    </div>
+
+  </main>
+
+  <!-- Footer strip -->
+  <footer class="err-footer">
+    <span>©2026 Stackly Zero Waste. All rights reserved.</span>
+    <div class="err-footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </footer>
+
+  <script src="404.js"></script>
+</body>
+</html>

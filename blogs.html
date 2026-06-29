@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blogs | Stackly Zero Waste</title>
+  <meta name="description" content="Insights, guides, and thought leadership on waste management, sustainability, circular economy, and zero-waste living from the Stackly team." />
+  <meta name="keywords" content="waste management blog, sustainability tips, zero waste India, composting guide, circular economy" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="blogs.css" />
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="images/stackly_logo.webp" alt="Stackly Zero Waste" width="44" height="44" />
+        <span class="logo-text">Stackly<span class="logo-accent">ZeroWaste</span></span>
+      </a>
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <div class="nav-dropdown">
+          <a href="#" class="nav-link">Waste Types <span class="arrow">▾</span></a>
+          <div class="dropdown-menu">
+            <a href="index.html">Food Waste</a><a href="#">Dry Waste</a><a href="#">E-Waste</a>
+            <a href="#">Glass Waste</a><a href="#">Textile Waste</a><a href="#">Plastic Waste</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <a href="#" class="nav-link">Solutions <span class="arrow">▾</span></a>
+          <div class="dropdown-menu">
+            <a href="#">Zero Waste Program</a><a href="#">Technology Solution</a>
+            <a href="#">EPR Plastics</a><a href="#">Recycled Products</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <a href="#" class="nav-link active">Explore <span class="arrow">▾</span></a>
+          <div class="dropdown-menu">
+            <a href="about.html">About Stackly</a>
+            <a href="careers.html">Careers</a>
+            <a href="news-media.html">News &amp; Media</a>
+            <a href="blogs.html" class="active-drop">Blogs</a>
+            <a href="case-studies.html">Case Studies</a>
+          </div>
+        </div>
+        <a href="signup.html" class="nav-cta">Sign In</a>
+      </nav>
+      <a href="login.html" class="nav-login-btn">Login</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section class="page-hero" id="blogs-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a><span class="bc-sep">›</span>
+        <a href="#">Explore</a><span class="bc-sep">›</span>
+        <span class="bc-current">Blogs</span>
+      </nav>
+      <div class="hero-left">
+        <span class="section-badge">✍️ Insights & Ideas</span>
+        <h1 class="page-hero-title">The <span class="gradient-text">Zero Waste</span><br />Knowledge Hub</h1>
+        <p class="page-hero-sub">Expert insights on sustainability, waste management, circular economy, EPR compliance, and practical guides for a greener future.</p>
+      </div>
+      <div class="search-box">
+        <input type="search" id="blog-search" placeholder="Search articles, topics, authors…" aria-label="Search blogs" />
+        <button type="submit" aria-label="Search">🔍</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FEATURED BLOG ========== -->
+  <section class="featured-blog" id="featured-blog">
+    <div class="container">
+      <span class="section-badge">Editor's Pick</span>
+      <div class="featured-blog-card">
+        <div class="featured-blog-img">🍃</div>
+        <div class="featured-blog-body">
+          <div class="blog-category">🌿 Food Waste</div>
+          <h2>The Complete Guide to On-Site Composting: From Setup to Harvest</h2>
+          <p>Learn how to design, install, and operate an on-site composting facility for housing societies, hotels, and corporate campuses — with real data from Stackly's 100+ installations across India.</p>
+          <div class="author-row">
+            <div class="author-avatar">👩‍🔬</div>
+            <div>
+              <div class="author-name">Priya Sharma, CTO</div>
+              <div class="author-meta">June 20, 2026 · 12 min read</div>
+            </div>
+          </div>
+          <a href="#" class="read-more">Read Full Article →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== BLOG GRID + SIDEBAR ========== -->
+  <section class="blogs-section" id="all-blogs">
+    <div class="container">
+      <div class="blogs-layout">
+
+        <!-- Main Blog Grid -->
+        <div class="blogs-main">
+          <div class="filter-tabs">
+            <button class="tab-btn active" data-cat="all">All Posts</button>
+            <button class="tab-btn" data-cat="food">Food Waste</button>
+            <button class="tab-btn" data-cat="circular">Circular Economy</button>
+            <button class="tab-btn" data-cat="tech">Tech & Innovation</button>
+            <button class="tab-btn" data-cat="policy">Policy & EPR</button>
+            <button class="tab-btn" data-cat="tips">Zero Waste Tips</button>
+          </div>
+          <div class="blog-grid" id="blog-grid">
+            <div class="blog-card" data-cat="food">
+              <div class="blog-card-img img-1">🥗</div>
+              <div class="blog-card-body">
+                <span class="blog-tag">Food Waste</span>
+                <h3>India Wastes 40% of Its Food — Here's What's Actually Being Done About It</h3>
+                <p>A deep dive into the statistics, regulations, and ground-level innovations transforming India's food waste crisis.</p>
+                <div class="blog-foot">
+                  <span>May 30, 2026</span>
+                  <span class="min-read">8 min</span>
+                  <a href="#" class="blog-link">Read →</a>
+                </div>
+              </div>
+            </div>
+            <div class="blog-card" data-cat="circular">
+              <div class="blog-card-img img-2">♾️</div>
+              <div class="blog-card-body">
+                <span class="blog-tag">Circular Economy</span>
+                <h3>What is the Circular Economy and Why Should Every Business Care?</h3>
+                <p>An accessible explainer on the principles of circularity and how companies can shift from linear to circular value chains.</p>
+                <div class="blog-foot">
+                  <span>May 22, 2026</span>
+                  <span class="min-read">6 min</span>
+                  <a href="#" class="blog-link">Read →</a>
+                </div>
+              </div>
+            </div>
+            <div class="blog-card" data-cat="tech">
+              <div class="blog-card-img img-3">🖥️</div>
+              <div class="blog-card-body">
+                <span class="blog-tag">Tech & Innovation</span>
+                <h3>How AI and IoT Are Revolutionising Waste Collection in Smart Cities</h3>
+                <p>From sensor-equipped bins to route-optimisation algorithms — the technology stack behind modern waste management.</p>
+                <div class="blog-foot">
+                  <span>May 14, 2026</span>
+                  <span class="min-read">7 min</span>
+                  <a href="#" class="blog-link">Read →</a>
+                </div>
+              </div>
+            </div>
+            <div class="blog-card" data-cat="policy">
+              <div class="blog-card-img img-4">📜</div>
+              <div class="blog-card-body">
+                <span class="blog-tag">Policy & EPR</span>
+                <h3>EPR Compliance in India: A Complete 2026 Checklist for Businesses</h3>
+                <p>Everything you need to know about Extended Producer Responsibility rules for plastics, e-waste, and packaging under current Indian law.</p>
+                <div class="blog-foot">
+                  <span>April 28, 2026</span>
+                  <span class="min-read">10 min</span>
+                  <a href="#" class="blog-link">Read →</a>
+                </div>
+              </div>
+            </div>
+            <div class="blog-card" data-cat="tips">
+              <div class="blog-card-img img-5">🏠</div>
+              <div class="blog-card-body">
+                <span class="blog-tag">Zero Waste Tips</span>
+                <h3>10 Easy Steps to Start Your Zero-Waste Kitchen Today</h3>
+                <p>Practical, beginner-friendly steps that anyone can start today to dramatically reduce household food and packaging waste.</p>
+                <div class="blog-foot">
+                  <span>April 10, 2026</span>
+                  <span class="min-read">5 min</span>
+                  <a href="#" class="blog-link">Read →</a>
+                </div>
+              </div>
+            </div>
+            <div class="blog-card" data-cat="circular">
+              <div class="blog-card-img img-6">🌱</div>
+              <div class="blog-card-body">
+                <span class="blog-tag">Circular Economy</span>
+                <h3>Upcycling vs. Recycling: What's the Difference and Which is Better?</h3>
+                <p>Breaking down the nuances between upcycling, recycling, and downcycling — and when each approach creates the most value.</p>
+                <div class="blog-foot">
+                  <span>March 28, 2026</span>
+                  <span class="min-read">5 min</span>
+                  <a href="#" class="blog-link">Read →</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="blogs-sidebar">
+          <div class="sidebar-widget">
+            <h3>📂 Categories</h3>
+            <div class="sidebar-categories">
+              <a href="#">Food Waste <span class="cat-count">14</span></a>
+              <a href="#">Circular Economy <span class="cat-count">11</span></a>
+              <a href="#">Tech & Innovation <span class="cat-count">9</span></a>
+              <a href="#">Policy & EPR <span class="cat-count">7</span></a>
+              <a href="#">Zero Waste Tips <span class="cat-count">18</span></a>
+              <a href="#">Company Updates <span class="cat-count">5</span></a>
+            </div>
+          </div>
+          <div class="sidebar-widget">
+            <h3>🔥 Popular Posts</h3>
+            <div class="popular-posts">
+              <div class="pop-post">
+                <div class="pop-post-img">♻️</div>
+                <div>
+                  <div class="pop-post-title">The Science of Bio-Methanation Explained Simply</div>
+                  <div class="pop-post-date">June 1, 2026</div>
+                </div>
+              </div>
+              <div class="pop-post">
+                <div class="pop-post-img">🌿</div>
+                <div>
+                  <div class="pop-post-title">Why India's Swachh Bharat Mission Matters to You</div>
+                  <div class="pop-post-date">May 5, 2026</div>
+                </div>
+              </div>
+              <div class="pop-post">
+                <div class="pop-post-img">📊</div>
+                <div>
+                  <div class="pop-post-title">Measuring Your Company's Waste Diversion Rate</div>
+                  <div class="pop-post-date">April 18, 2026</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sidebar-widget newsletter-widget">
+            <h3>📬 Newsletter</h3>
+            <p>Get the latest sustainability insights delivered to your inbox every week.</p>
+            <form class="newsletter-form" onsubmit="return false;">
+              <input type="email" placeholder="Your email address" aria-label="Email for newsletter" />
+              <button type="submit">Subscribe for Free →</button>
+            </form>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="images/stackly_logo.webp" alt="Stackly" width="36" height="36" />
+            <span>Stackly<em>ZeroWaste</em></span>
+          </div>
+          <p>India's most trusted integrated waste management company — turning waste into resources for a circular economy.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+            <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+            <a href="#" class="social-link" aria-label="YouTube">▶</a>
+            <a href="#" class="social-link" aria-label="Instagram">◎</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Waste Types</h4>
+          <ul>
+            <li><a href="index.html">Food Waste</a></li>
+            <li><a href="#">Dry Waste</a></li>
+            <li><a href="#">E-Waste</a></li>
+            <li><a href="#">Glass Waste</a></li>
+            <li><a href="#">Plastic Waste</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Solutions</h4>
+          <ul>
+            <li><a href="#">Zero Waste Program</a></li>
+            <li><a href="#">Technology Solution</a></li>
+            <li><a href="#">EPR Plastics</a></li>
+            <li><a href="#">Recycled Products</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="about.html">About Stackly</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="case-studies.html">Case Studies</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="news-media.html">News &amp; Media</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>©2026 Stackly Zero Waste. All rights reserved.</span>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Data Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
+
+  <script>
+    const ham = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+    ham.addEventListener('click', () => { ham.classList.toggle('open'); navLinks.classList.toggle('open'); });
+    const btt = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => { btt.classList.toggle('visible', window.scrollY > 400); });
+    btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // Blog filter
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const blogCards = document.querySelectorAll('.blog-card');
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const cat = btn.dataset.cat;
+        blogCards.forEach(card => {
+          if (cat === 'all' || card.dataset.cat === cat) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | Stackly Zero Waste</title>
+  <meta name="description" content="Your Stackly Zero Waste management dashboard — track, analyse and optimise your food waste operations." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body class="dash-body">
+
+  <!-- ====== SIDEBAR ====== -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-top">
+      <a href="index.html" class="sidebar-logo" id="dash-logo">
+        <img src="images/stackly_logo.webp" alt="Stackly" width="36" height="36" />
+        <span>Stackly<em>ZW</em></span>
+      </a>
+      <button class="sidebar-close" id="sidebar-close" aria-label="Close sidebar">✕</button>
+    </div>
+
+    <nav class="sidebar-nav" aria-label="Dashboard navigation">
+      <div class="nav-section-label">Main</div>
+      <a href="#" class="sidebar-link active" id="nav-dashboard" data-page="overview">
+        <span class="nav-icon">🏠</span><span>Dashboard</span>
+      </a>
+      <a href="#" class="sidebar-link" id="nav-analytics" data-page="analytics">
+        <span class="nav-icon">📊</span><span>Analytics</span>
+        <span class="nav-badge">New</span>
+      </a>
+      <a href="#" class="sidebar-link" id="nav-composting" data-page="composting">
+        <span class="nav-icon">🌿</span><span>Composting</span>
+      </a>
+      <a href="#" class="sidebar-link" id="nav-biogas" data-page="biogas">
+        <span class="nav-icon">⚡</span><span>Biomethanation</span>
+      </a>
+      <a href="#" class="sidebar-link" id="nav-reports" data-page="reports">
+        <span class="nav-icon">📄</span><span>Reports</span>
+      </a>
+
+      <div class="nav-section-label">Management</div>
+      <a href="#" class="sidebar-link" id="nav-team" data-page="team">
+        <span class="nav-icon">👥</span><span>Team</span>
+      </a>
+      <a href="#" class="sidebar-link" id="nav-compliance" data-page="compliance">
+        <span class="nav-icon">✅</span><span>Compliance</span>
+        <span class="nav-dot red"></span>
+      </a>
+      <a href="#" class="sidebar-link" id="nav-settings" data-page="settings">
+        <span class="nav-icon">⚙️</span><span>Settings</span>
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="sidebar-user" id="sidebar-user">
+        <div class="user-avatar" id="user-avatar-sidebar">AK</div>
+        <div class="user-info">
+          <div class="user-name" id="sidebar-username">Aarav Kumar</div>
+          <div class="user-role">Admin</div>
+        </div>
+        <button class="user-menu-btn" id="user-menu-btn" aria-label="User menu">⋯</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sidebar overlay (mobile) -->
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+  <!-- ====== MAIN CONTENT ====== -->
+  <div class="dash-main" id="dash-main">
+
+    <!-- Top bar -->
+    <header class="dash-topbar" id="dash-topbar">
+      <div class="topbar-left">
+        <button class="menu-toggle" id="menu-toggle" aria-label="Open sidebar">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="topbar-title">
+          <h2 id="page-title">Overview</h2>
+          <span class="topbar-date" id="topbar-date"></span>
+        </div>
+      </div>
+      <div class="topbar-right">
+        <div class="search-wrap">
+          <span class="search-icon">🔍</span>
+          <input type="search" placeholder="Search..." class="search-input" id="dash-search" aria-label="Search dashboard" />
+        </div>
+        <button class="icon-btn notif-btn" id="notif-btn" aria-label="Notifications">
+          🔔
+          <span class="notif-badge">3</span>
+        </button>
+        <div class="topbar-user-avatar" id="topbar-avatar">AK</div>
+      </div>
+    </header>
+
+    <!-- Page content area -->
+    <div class="dash-content" id="dash-content">
+
+      <!-- Welcome banner -->
+      <div class="welcome-banner" id="welcome-banner">
+        <div class="welcome-text">
+          <p class="welcome-greeting" id="welcome-greeting">Good Morning ☀️</p>
+          <h3 id="welcome-name">Welcome back, Aarav!</h3>
+          <p class="welcome-sub">Here's your waste management overview for today.</p>
+        </div>
+        <div class="welcome-illustration" aria-hidden="true">🌿</div>
+      </div>
+
+      <!-- KPI Cards -->
+      <section class="kpi-grid" aria-label="Key performance indicators">
+        <div class="kpi-card" id="kpi-total">
+          <div class="kpi-header">
+            <span class="kpi-label">Total Waste Today</span>
+            <span class="kpi-icon bg-green">🗑️</span>
+          </div>
+          <div class="kpi-value" data-count="342" data-suffix=" kg">0 kg</div>
+          <div class="kpi-trend up">▲ 12% vs yesterday</div>
+        </div>
+        <div class="kpi-card" id="kpi-compost">
+          <div class="kpi-header">
+            <span class="kpi-label">Composted</span>
+            <span class="kpi-icon bg-teal">🌱</span>
+          </div>
+          <div class="kpi-value" data-count="218" data-suffix=" kg">0 kg</div>
+          <div class="kpi-trend up">▲ 8% vs last week</div>
+        </div>
+        <div class="kpi-card" id="kpi-biogas">
+          <div class="kpi-header">
+            <span class="kpi-label">Biogas Generated</span>
+            <span class="kpi-icon bg-amber">⚡</span>
+          </div>
+          <div class="kpi-value" data-count="124" data-suffix=" m³">0 m³</div>
+          <div class="kpi-trend up">▲ 5% vs last week</div>
+        </div>
+        <div class="kpi-card" id="kpi-diversion">
+          <div class="kpi-header">
+            <span class="kpi-label">Landfill Diversion</span>
+            <span class="kpi-icon bg-purple">♻️</span>
+          </div>
+          <div class="kpi-value" data-count="94" data-suffix="%">0%</div>
+          <div class="kpi-trend up">▲ 2% this month</div>
+        </div>
+      </section>
+
+      <!-- Charts row -->
+      <div class="charts-row">
+
+        <!-- Weekly trend chart -->
+        <div class="chart-card wide" id="chart-trend">
+          <div class="chart-card-header">
+            <h3>Weekly Waste Trend</h3>
+            <div class="chart-legend">
+              <span class="legend-dot green"></span><span>Composted</span>
+              <span class="legend-dot teal"></span><span>Biogas</span>
+              <span class="legend-dot gray"></span><span>Landfill</span>
+            </div>
+          </div>
+          <div class="bar-chart" id="bar-chart" aria-label="Weekly waste bar chart">
+            <!-- Bars generated by JS -->
+          </div>
+          <div class="chart-x-labels" id="chart-x-labels"></div>
+        </div>
+
+        <!-- Donut chart -->
+        <div class="chart-card narrow" id="chart-donut">
+          <div class="chart-card-header">
+            <h3>Waste Distribution</h3>
+          </div>
+          <div class="donut-wrap">
+            <svg class="donut-svg" viewBox="0 0 120 120" aria-label="Waste distribution donut chart">
+              <circle class="donut-track" cx="60" cy="60" r="50" />
+              <circle class="donut-seg seg-green" cx="60" cy="60" r="50"
+                stroke-dasharray="196 118" stroke-dashoffset="0" />
+              <circle class="donut-seg seg-teal" cx="60" cy="60" r="50"
+                stroke-dasharray="107 207" stroke-dashoffset="-196" />
+              <circle class="donut-seg seg-amber" cx="60" cy="60" r="50"
+                stroke-dasharray="11 303" stroke-dashoffset="-303" />
+            </svg>
+            <div class="donut-center">
+              <span class="donut-pct">94%</span>
+              <span class="donut-pct-label">Diverted</span>
+            </div>
+          </div>
+          <div class="donut-legend">
+            <div class="d-legend-item"><span class="d-dot green"></span><span class="d-label">Composted</span><span class="d-val">63%</span></div>
+            <div class="d-legend-item"><span class="d-dot teal"></span><span class="d-label">Biogas</span><span class="d-val">34%</span></div>
+            <div class="d-legend-item"><span class="d-dot amber"></span><span class="d-label">Landfill</span><span class="d-val">3%</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom row -->
+      <div class="bottom-row">
+
+        <!-- Recent Activity -->
+        <div class="activity-card" id="activity-card">
+          <div class="section-card-header">
+            <h3>Recent Activity</h3>
+            <a href="#" class="view-all" id="view-all-activity">View all →</a>
+          </div>
+          <ul class="activity-list" id="activity-list">
+            <li class="activity-item">
+              <span class="activity-dot green"></span>
+              <div class="activity-info">
+                <span class="activity-title">Composting batch #47 completed</span>
+                <span class="activity-time">2 hours ago</span>
+              </div>
+              <span class="activity-qty">+180 kg</span>
+            </li>
+            <li class="activity-item">
+              <span class="activity-dot teal"></span>
+              <div class="activity-info">
+                <span class="activity-title">Biogas unit B3 peak production</span>
+                <span class="activity-time">5 hours ago</span>
+              </div>
+              <span class="activity-qty">+62 m³</span>
+            </li>
+            <li class="activity-item">
+              <span class="activity-dot amber"></span>
+              <div class="activity-info">
+                <span class="activity-title">Monthly ESG report generated</span>
+                <span class="activity-time">Yesterday</span>
+              </div>
+              <span class="activity-qty badge-pdf">PDF</span>
+            </li>
+            <li class="activity-item">
+              <span class="activity-dot green"></span>
+              <div class="activity-info">
+                <span class="activity-title">New collection route optimised</span>
+                <span class="activity-time">Yesterday</span>
+              </div>
+              <span class="activity-qty">−18% fuel</span>
+            </li>
+            <li class="activity-item">
+              <span class="activity-dot red"></span>
+              <div class="activity-info">
+                <span class="activity-title">Compliance deadline reminder</span>
+                <span class="activity-time">2 days ago</span>
+              </div>
+              <span class="activity-qty badge-alert">!</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="quick-actions-card" id="quick-actions-card">
+          <div class="section-card-header">
+            <h3>Quick Actions</h3>
+          </div>
+          <div class="quick-actions-grid">
+            <button class="qa-btn" id="qa-report" type="button">
+              <span class="qa-icon">📋</span>
+              <span>Generate Report</span>
+            </button>
+            <button class="qa-btn" id="qa-schedule" type="button">
+              <span class="qa-icon">📅</span>
+              <span>Schedule Pickup</span>
+            </button>
+            <button class="qa-btn" id="qa-team" type="button">
+              <span class="qa-icon">👥</span>
+              <span>Add Team Member</span>
+            </button>
+            <button class="qa-btn" id="qa-compliance" type="button">
+              <span class="qa-icon">✅</span>
+              <span>Check Compliance</span>
+            </button>
+            <button class="qa-btn" id="qa-export" type="button">
+              <span class="qa-icon">📤</span>
+              <span>Export Data</span>
+            </button>
+            <button class="qa-btn" id="qa-support" type="button">
+              <span class="qa-icon">💬</span>
+              <span>Contact Support</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Goals / Targets -->
+        <div class="goals-card" id="goals-card">
+          <div class="section-card-header">
+            <h3>Monthly Goals</h3>
+            <span class="goals-month" id="goals-month">Jun 2026</span>
+          </div>
+          <div class="goals-list">
+            <div class="goal-item">
+              <div class="goal-row">
+                <span class="goal-name">Landfill Diversion</span>
+                <span class="goal-pct">94%</span>
+              </div>
+              <div class="goal-bar"><div class="goal-fill green" style="width:94%"></div></div>
+              <span class="goal-target">Target: 95%</span>
+            </div>
+            <div class="goal-item">
+              <div class="goal-row">
+                <span class="goal-name">Compost Yield</span>
+                <span class="goal-pct">78%</span>
+              </div>
+              <div class="goal-bar"><div class="goal-fill teal" style="width:78%"></div></div>
+              <span class="goal-target">Target: 80%</span>
+            </div>
+            <div class="goal-item">
+              <div class="goal-row">
+                <span class="goal-name">Biogas Output</span>
+                <span class="goal-pct">61%</span>
+              </div>
+              <div class="goal-bar"><div class="goal-fill amber" style="width:61%"></div></div>
+              <span class="goal-target">Target: 70%</span>
+            </div>
+            <div class="goal-item">
+              <div class="goal-row">
+                <span class="goal-name">CO₂ Reduction</span>
+                <span class="goal-pct">88%</span>
+              </div>
+              <div class="goal-bar"><div class="goal-fill purple" style="width:88%"></div></div>
+              <span class="goal-target">Target: 90%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- /dash-content -->
+
+    <!-- Toast notification -->
+    <div class="toast" id="toast" role="alert" aria-live="polite"></div>
+
+    <!-- User menu dropdown -->
+    <div class="user-dropdown" id="user-dropdown" hidden>
+      <div class="user-dropdown-header">
+        <div class="user-avatar-lg" id="dropdown-avatar">AK</div>
+        <div>
+          <div class="ud-name" id="dropdown-name">Aarav Kumar</div>
+          <div class="ud-email" id="dropdown-email">aarav@company.com</div>
+        </div>
+      </div>
+      <hr />
+      <a href="#" class="ud-link" id="ud-profile">👤 My Profile</a>
+      <a href="#" class="ud-link" id="ud-billing">💳 Billing</a>
+      <a href="#" class="ud-link" id="ud-settings">⚙️ Settings</a>
+      <hr />
+      <a href="login.html" class="ud-link ud-logout" id="logout-btn">🚪 Sign Out</a>
+    </div>
+
+  </div>
+  <!-- /dash-main -->
+
+  <script src="auth.js"></script>
+  <script src="dashboard.js"></script>
+
+</body>
+</html>

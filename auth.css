@@ -523,6 +523,14 @@ img { display: block; max-width: 100%; }
   .auth-card { padding: 32px 20px; }
 }
 
+@media (max-width: 380px) {
+  .auth-card { padding: 24px 14px; }
+  .auth-title { font-size: 1.5rem; }
+  .submit-btn { font-size: 0.9rem; padding: 13px; }
+  .social-login { flex-direction: column; }
+  .social-btn { width: 100%; justify-content: center; }
+}
+
 /* ===== SUCCESS STATE ===== */
 .form-error-msg.success-msg {
   background: linear-gradient(135deg, rgba(45,138,71,0.12), rgba(61,201,185,0.12));

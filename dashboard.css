@@ -877,3 +877,13 @@ img { display: block; max-width: 100%; }
   .welcome-banner { padding: 20px; }
   .quick-actions-grid { grid-template-columns: repeat(2, 1fr); }
 }
+
+@media (max-width: 380px) {
+  .kpi-grid { grid-template-columns: 1fr; }
+  .dash-content { padding: 12px 10px; gap: 12px; }
+  .welcome-banner { padding: 16px; }
+  .welcome-banner h2 { font-size: 1.2rem; }
+  .quick-actions-grid { grid-template-columns: 1fr 1fr; }
+  .topbar { padding: 0 12px; }
+  .menu-toggle { width: 36px; height: 36px; }
+}

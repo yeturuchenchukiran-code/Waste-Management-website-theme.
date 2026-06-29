@@ -260,9 +260,9 @@ button { border: none; cursor: pointer; background: none; font-family: inherit; 
 }
 
 @media (max-width: 768px) {
-  .nav-links { display: none; position: fixed; top: 72px; left: 0; right: 0; background: var(--dark-800); flex-direction: column; padding: 20px; gap: 4px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .nav-links { display: none; position: fixed; top: 72px; left: 0; right: 0; background: var(--dark-800); flex-direction: column; padding: 20px 16px; gap: 4px; }
   .nav-links.open { display: flex; }
-  .nav-login-btn { display: none; }
+  .nav-login-btn { padding: 7px 14px; font-size: 0.8rem; }
   .hamburger { display: flex; }
   .nav-dropdown .dropdown-menu { position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; background: transparent; padding: 4px 0 4px 16px; border: none; }
   .team-grid { grid-template-columns: 1fr; }
@@ -279,8 +279,30 @@ button { border: none; cursor: pointer; background: none; font-family: inherit; 
 
 @media (max-width: 480px) {
   .page-hero { padding: 110px 0 60px; }
+  .hero-btns { flex-direction: column; align-items: flex-start; }
+  .hero-btns .btn { width: 100%; justify-content: center; }
+  .stats-grid { grid-template-columns: 1fr 1fr; }
+  .stat-block { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); padding: 20px 16px; }
+  .stat-block:last-child { border-bottom: none; }
+  .mission-badge-float { position: static; margin-top: 20px; display: inline-block; }
+  .section-header h2 { font-size: 1.65rem; }
+  .timeline-content { padding: 20px; }
+}
+
+@media (max-width: 400px) {
+  .nav-container { padding: 0 12px; }
+  .logo-text { font-size: 0.95rem; }
+  .nav-login-btn { padding: 6px 10px; font-size: 0.72rem; }
+  .nav-login-btn::before { display: none; }
+  .hamburger { padding: 6px; }
+  .page-hero { padding: 95px 0 48px; }
+  .page-hero-title { font-size: 1.9rem; }
   .hero-btns { flex-direction: column; }
+  .hero-btns .btn { width: 100%; justify-content: center; }
   .stats-grid { grid-template-columns: 1fr; }
   .stat-block { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
-  .mission-badge-float { position: static; margin-top: 20px; display: inline-block; }
+  .section-header h2 { font-size: 1.5rem; }
+  .values-grid { gap: 20px; }
+  .footer-grid { gap: 20px; }
+  .back-to-top { bottom: 16px; right: 12px; width: 40px; height: 40px; }
 }

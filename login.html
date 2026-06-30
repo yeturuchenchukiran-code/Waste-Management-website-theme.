@@ -96,7 +96,7 @@
         <div class="form-group">
           <div class="label-row">
             <label for="login-password">Password</label>
-            <a href="#" class="forgot-link" id="forgot-password">Forgot password?</a>
+            <a href="404.html" class="forgot-link" id="forgot-password">Forgot password?</a>
           </div>
           <div class="input-wrap">
             <span class="input-icon">🔒</span>
@@ -119,10 +119,7 @@
           <span class="submit-arrow">→</span>
         </button>
 
-        <div class="form-error-msg" id="login-error" hidden>
-          <span>❌</span> Invalid email or password. Please try again.
-        </div>
-
+        
         <!-- Demo hint -->
         <div class="demo-hint">
           <span>🔑</span> Demo: use any email &amp; password (min 6 chars) to sign in
@@ -132,7 +129,40 @@
       <p class="auth-terms">By signing in, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
     </main>
   </div>
+<script>
 
+  document.getElementById("login-google").addEventListener("click", function () {
+    window.location.href = "404.html";
+});
+
+document.getElementById("login-microsoft").addEventListener("click", function () {
+    window.location.href = "404.html";
+});
+
+// Clear fields whenever the page loads
+window.addEventListener("load", function () {
+    const email = document.getElementById("login-email");
+    const password = document.getElementById("login-password");
+
+    email.value = "";
+    password.value = "";
+
+    email.setAttribute("autocomplete", "off");
+    password.setAttribute("autocomplete", "new-password");
+});
+
+// Clear fields after refresh/back
+window.addEventListener("pageshow", function () {
+    document.getElementById("login-email").value = "";
+    document.getElementById("login-password").value = "";
+});
+
+// Clear before leaving page
+window.onbeforeunload = function () {
+    document.getElementById("login-email").value = "";
+    document.getElementById("login-password").value = "";
+};
+</script>
   <script src="auth.js"></script>
 </body>
 </html>

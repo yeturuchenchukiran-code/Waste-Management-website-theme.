@@ -231,6 +231,33 @@ img { display: block; max-width: 100%; }
 
 .user-menu-btn { color: rgba(255,255,255,0.4); font-size: 1.1rem; padding: 4px; }
 
+/* Sidebar logout button */
+.sidebar-logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 11px 12px;
+  margin-top: 8px;
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgba(255, 90, 90, 0.85);
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  cursor: pointer;
+  transition: all var(--transition);
+  font-family: inherit;
+  letter-spacing: 0.01em;
+}
+.sidebar-logout-btn:hover {
+  background: rgba(239, 68, 68, 0.18);
+  color: #ff6b6b;
+  border-color: rgba(239, 68, 68, 0.4);
+  transform: translateX(2px);
+}
+.sidebar-logout-icon { font-size: 1rem; }
+
 /* Sidebar overlay (mobile) */
 .sidebar-overlay {
   display: none;

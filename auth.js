@@ -355,7 +355,7 @@
       logoutBtn.addEventListener('click', function (e) {
         e.preventDefault();
         localStorage.removeItem('stackly_current_user');
-        window.location.href = 'index.html';
+        window.location.href = 'login.html';
       });
     }
   }

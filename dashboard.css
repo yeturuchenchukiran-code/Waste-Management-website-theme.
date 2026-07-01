@@ -96,7 +96,7 @@ img { display: block; max-width: 100%; }
   align-items: center;
   gap: 10px;
 }
-.sidebar-logo img { width: 32px; height: 32px; border-radius: 8px; object-fit: cover; }
+.sidebar-logo img { width: auto; height: 46px; object-fit: contain; margin-bottom: 5px; filter: brightness(0) saturate(100%) invert(43%) sepia(30%) saturate(1476%) hue-rotate(92deg) brightness(94%) contrast(86%); }
 .sidebar-logo span {
   font-family: var(--font-head);
   font-size: 1rem;

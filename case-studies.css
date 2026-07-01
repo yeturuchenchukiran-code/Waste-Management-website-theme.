@@ -37,7 +37,7 @@ button { border: none; cursor: pointer; background: none; font-family: inherit; 
 .navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(6,12,8,0.96); backdrop-filter: blur(20px); box-shadow: 0 4px 30px rgba(0,0,0,.3); }
 .nav-container { max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; height: 72px; gap: 32px; }
 .nav-logo { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
-.nav-logo img { width: 36px; height: 36px; border-radius: 8px; object-fit: cover; }
+.nav-logo img { width: auto; height: 50px; object-fit: contain; margin-top: 4px; filter: brightness(0) saturate(100%) invert(43%) sepia(30%) saturate(1476%) hue-rotate(92deg) brightness(94%) contrast(86%); }
 .logo-text { font-family: var(--font-head); font-size: 1.1rem; font-weight: 800; color: var(--white); }
 .logo-text .logo-accent { color: var(--green-400); }
 .nav-links { display: flex; align-items: center; gap: 8px; margin-left: auto; }
@@ -143,7 +143,7 @@ button { border: none; cursor: pointer; background: none; font-family: inherit; 
 .footer { background: var(--dark-900); color: var(--white); padding: 80px 0 0; }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; padding-bottom: 60px; border-bottom: 1px solid rgba(255,255,255,0.08); }
 .footer-brand .footer-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
-.footer-brand .footer-logo img { width: 36px; height: 36px; border-radius: 8px; object-fit: cover; }
+.footer-brand .footer-logo img { width: auto; height: 60px; object-fit: contain; margin-bottom: 10px; filter: brightness(0) saturate(100%) invert(43%) sepia(30%) saturate(1476%) hue-rotate(92deg) brightness(94%) contrast(86%); }
 .footer-brand .footer-logo span { font-family: var(--font-head); font-size: 1.1rem; font-weight: 800; color: var(--white); }
 .footer-brand .footer-logo span em { color: var(--green-400); font-style: normal; }
 .footer-brand p { font-size: 0.875rem; color: rgba(255,255,255,0.55); line-height: 1.8; max-width: 280px; margin-bottom: 28px; }

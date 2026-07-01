@@ -65,8 +65,14 @@
     <!-- Right panel (form) -->
     <main class="auth-card" id="login-card">
       <div class="auth-card-header">
-        <h2 class="auth-card-title">Sign In</h2>
+        <h2 class="auth-card-title" id="login-title">User Login</h2>
         <p class="auth-card-sub">Don't have an account? <a href="signup.html" id="go-signup">Create one →</a></p>
+      </div>
+
+      <!-- Login Tabs -->
+      <div class="login-tabs">
+        <button class="login-tab active" id="tab-user" type="button">👤 User Login</button>
+        <button class="login-tab" id="tab-admin" type="button">👨‍💼 Admin Login</button>
       </div>
 
       <!-- Social login -->
@@ -84,6 +90,7 @@
       <div class="divider"><span>or sign in with email</span></div>
 
       <form class="auth-form" id="login-form" novalidate>
+        <input type="hidden" id="login-role" name="role" value="user" />
         <div class="form-group">
           <label for="login-email">Email Address</label>
           <div class="input-wrap">
@@ -162,6 +169,26 @@ window.onbeforeunload = function () {
     document.getElementById("login-email").value = "";
     document.getElementById("login-password").value = "";
 };
+
+// Login Tabs Logic
+const tabUser = document.getElementById("tab-user");
+const tabAdmin = document.getElementById("tab-admin");
+const roleInput = document.getElementById("login-role");
+const loginTitle = document.getElementById("login-title");
+
+tabUser.addEventListener("click", () => {
+  tabUser.classList.add("active");
+  tabAdmin.classList.remove("active");
+  roleInput.value = "user";
+  loginTitle.textContent = "User Login";
+});
+
+tabAdmin.addEventListener("click", () => {
+  tabAdmin.classList.add("active");
+  tabUser.classList.remove("active");
+  roleInput.value = "admin";
+  loginTitle.textContent = "Admin Login";
+});
 </script>
   <script src="auth.js"></script>
 </body>

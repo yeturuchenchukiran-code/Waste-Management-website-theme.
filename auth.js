@@ -319,7 +319,9 @@
 
   function populateDashboardUser(user) {
     // Avatar initials
-    const initials = (user.firstName[0] + user.lastName[0]).toUpperCase();
+    const fInit = user.firstName ? user.firstName.charAt(0) : '';
+    const lInit = user.lastName ? user.lastName.charAt(0) : '';
+    const initials = (fInit + lInit).toUpperCase() || 'U';
 
     // Sidebar avatar
     const sidebarAvatar = document.getElementById('user-avatar-sidebar');

@@ -1600,7 +1600,7 @@ input, select, textarea { font-family: inherit; }
     width:700px;
     height:700px;
     border-radius:50%;
-    background:radial-gradient(circle,#22c55e25,transparent 70%);
+    background:radial-gradient(circle,rgba(45,138,71,0.25),transparent 70%);
     animation:pulse 4s infinite;
 }
 
@@ -1634,8 +1634,8 @@ input, select, textarea { font-family: inherit; }
     inset:-8px;
     border-radius:50%;
     border:5px solid transparent;
-    border-top:5px solid #22c55e;
-    border-right:5px solid #4ade80;
+    border-top:5px solid var(--green-500);
+    border-right:5px solid var(--green-400);
     animation:spin 1.2s linear infinite;
 }
 
@@ -1653,6 +1653,7 @@ input, select, textarea { font-family: inherit; }
     height:70px;
     object-fit:contain;
     animation:logoFloat 2s ease-in-out infinite;
+    filter: brightness(0) saturate(100%) invert(43%) sepia(30%) saturate(1476%) hue-rotate(92deg) brightness(94%) contrast(86%);
 }
 
 .loader-box h2{
@@ -1664,7 +1665,7 @@ input, select, textarea { font-family: inherit; }
 }
 
 .loader-box p{
-    color:#8fdca8;
+    color:var(--green-200);
     margin-top:8px;
     font-size:15px;
     letter-spacing:1px;
@@ -1683,7 +1684,7 @@ input, select, textarea { font-family: inherit; }
     display:block;
     width:0%;
     height:100%;
-    background:linear-gradient(90deg,#16a34a,#4ade80,#22c55e);
+    background:linear-gradient(90deg,var(--green-600),var(--green-400),var(--green-300));
     animation:loading 2.5s ease forwards;
 }
 

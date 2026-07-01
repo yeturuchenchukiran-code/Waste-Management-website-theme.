@@ -195,6 +195,35 @@
 
     initPasswordToggle('toggle-login-pw', 'login-password');
 
+    // Tabs Logic
+    const tabUser = document.getElementById('tab-user');
+    const tabAdmin = document.getElementById('tab-admin');
+    const roleInput = document.getElementById('login-role');
+    const loginTitle = document.getElementById('login-title');
+    
+    if (tabUser && tabAdmin) {
+      tabUser.addEventListener('click', function() {
+        tabUser.classList.add('active');
+        tabAdmin.classList.remove('active');
+        roleInput.value = 'user';
+        if (loginTitle) loginTitle.textContent = 'User Login';
+      });
+      tabAdmin.addEventListener('click', function() {
+        tabAdmin.classList.add('active');
+        tabUser.classList.remove('active');
+        roleInput.value = 'admin';
+        if (loginTitle) loginTitle.textContent = 'Admin Login';
+      });
+
+      const urlParams = new URLSearchParams(window.location.search);
+      const roleParam = urlParams.get('role');
+      if (roleParam === 'admin') {
+        tabAdmin.click();
+      } else if (roleParam === 'user') {
+        tabUser.click();
+      }
+    }
+
     // Pre-fill email if coming from signup
     const params = new URLSearchParams(window.location.search);
     if (params.get('registered') === '1') {
@@ -269,6 +298,10 @@
             };
           }
 
+          // Check the role from the hidden input
+          const loginRole = document.getElementById('login-role') ? document.getElementById('login-role').value : 'user';
+          sessionUser.role = loginRole;
+          
           setCurrentUser(sessionUser);
 
           // Show success briefly then redirect
@@ -279,7 +312,11 @@
           }
 
           setTimeout(function () {
-            window.location.href = 'dashboard.html';
+            if (loginRole === 'admin') {
+              window.location.href = 'admin-dashboard.html';
+            } else {
+              window.location.href = 'dashboard.html';
+            }
           }, 1000);
 
         } else {

@@ -169,25 +169,6 @@ window.onbeforeunload = function () {
     document.getElementById("login-password").value = "";
 };
 
-// Login Tabs Logic
-const tabUser = document.getElementById("tab-user");
-const tabAdmin = document.getElementById("tab-admin");
-const roleInput = document.getElementById("login-role");
-const loginTitle = document.getElementById("login-title");
-
-tabUser.addEventListener("click", () => {
-  tabUser.classList.add("active");
-  tabAdmin.classList.remove("active");
-  roleInput.value = "user";
-  loginTitle.textContent = "User Login";
-});
-
-tabAdmin.addEventListener("click", () => {
-  tabAdmin.classList.add("active");
-  tabUser.classList.remove("active");
-  roleInput.value = "admin";
-  loginTitle.textContent = "Admin Login";
-});
 </script>
   <script src="auth.js"></script>
 </body>
